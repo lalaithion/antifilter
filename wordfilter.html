@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <script src="antiwordfilter.js"></script>
+    <link rel="stylesheet" href="words.css">
+</head>
+
+<body>
+    <span class="header">
+        <h1>Beat every Word Filter</h1>
+        <h2>Except for extremely smart ones</h2>
+        <p>Email me at izaak.weiss@gmail.com for help improving your word filter!</p>
+    </span>
+    
+    <p>Input</p>
+    <input type="text" name="Word" id="input"/>
+    <br />
+    <br />
+    <button type="button" onclick="transform()">Transform</button>
+    <br />
+    <p>Output</p>
+    <input type="text" name="Formatted Word" id="output"/>
+    
+    <script>
+        function transform() {
+            var orig = document.getElementById("input").value;
+            var trans = interleave(orig);
+            document.getElementById("output").value = trans;
+        }
+    </script>
+</body>
